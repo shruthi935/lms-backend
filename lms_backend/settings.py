@@ -174,8 +174,10 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://localhost:5174"
-    
+    "https://serene-cannoli-2be2c3.netlify.app",
 ]
+    
+
 import os
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
