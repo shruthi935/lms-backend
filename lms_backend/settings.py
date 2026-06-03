@@ -24,13 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = 'your-new-long-secret-key-that-is-at-least-32-characters-long!!'
+# SECRET_KEY = 'your-new-long-secret-key-that-is-at-least-32-characters-long!!'
+SECRET_KEY ='dw5(ye^pfgnd#a5mmlcyfqpzy=b!vgbt$5ff0ejcn!9whi81$e'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
 
 
 # Application definition
